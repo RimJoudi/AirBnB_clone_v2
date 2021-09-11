@@ -16,6 +16,7 @@ def hbnb():
     """
     return 'Hello HBNB!'
 
+
 @app.route('/hbnb', strict_slashes=False)
 def hbnb_():
     """
@@ -23,6 +24,7 @@ def hbnb_():
         in the route page
     """
     return 'HBNB!'
+
 
 @app.route('/c/<text>', strict_slashes=False)
 def hbnb_c(text):
@@ -41,6 +43,7 @@ def hbnb_n(n):
         in the route page
     """
     return '{} is a number'.format(n)
+
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
 def hbnb_html(n):
