@@ -20,10 +20,10 @@ def hbnb():
 @app.route('/hbnb', strict_slashes=False)
 def hbnb_():
     """
-        fn to display HBNB!
+        fn to display HBNB
         in the route page
     """
-    return 'HBNB!'
+    return 'HBNB'
 
 @app.route('/c/<text>', strict_slashes=False)
 def hbnb_c(text):

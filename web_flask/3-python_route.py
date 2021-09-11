@@ -17,13 +17,15 @@ def hbnb():
     """
     return 'Hello HBNB!'
 
+
 @app.route('/hbnb', strict_slashes=False)
 def hbnb_():
     """
-        fn to display HBNB!
+        fn to display HBNB
         in the route page
     """
-    return 'HBNB!'
+    return 'HBNB'
+
 
 @app.route('/c/<text>', strict_slashes=False)
 def hbnb_c(text):
@@ -33,6 +35,7 @@ def hbnb_c(text):
     """
     txt = text.replace('_', ' ')
     return 'C {}'.format(txt)
+
 
 @app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
