@@ -10,6 +10,14 @@ from models.state import State
 app = Flask(__name__)
 
 
+@app.teardown_appcontext
+def hbnb_teardown_app():
+    """
+        close the current SQLAlchemy Session
+    """
+    storage.close()
+
+
 @app.route('/state_list', strict_slashes=False)
 def hbnb_state_list():
     """
@@ -18,14 +26,6 @@ def hbnb_state_list():
     """
     states_list = storage.all(State)
     return render_template('7-states_list.html', states=states_list)
-
-
-@app.teardown_appcontext
-def hbnb_teardown_app():
-    """
-        close the current SQLAlchemy Session
-    """
-    storage.close()
 
 
 if __name__ == "__main__":
