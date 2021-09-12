@@ -24,7 +24,7 @@ def hbnb_state_list():
         fn for fetching data
         from the storage engine
     """
-    states_list = storage.all(State)
+    states_list = storage.all(State).values()
     return render_template('7-states_list.html', states=states_list)
 
 
